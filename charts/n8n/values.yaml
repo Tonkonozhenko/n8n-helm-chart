@@ -389,6 +389,7 @@ worker:
   # it may be used to increase the timeout for the livenessProbe (e.g., to resolve issues like
   livenessProbe:
     httpGet:
+      host: 127.0.0.1
       path: /healthz
       port: http
     # initialDelaySeconds: 30
@@ -402,6 +403,7 @@ worker:
 
   readinessProbe:
     httpGet:
+      host: 127.0.0.1
       path: /healthz
       port: http
     # initialDelaySeconds: 30
